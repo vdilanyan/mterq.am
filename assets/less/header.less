@@ -6,16 +6,55 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 16px 0;
 
     ul {
       display: flex;
+      align-items: center;
       margin: 0 82px 0 0;
-      gap: 24px;
 
       li {
-        a {
+        display: block;
+        a:not(.main-button, .favorites) {
+          display: block;
+          padding: 24px 24px 22px;
           color: inherit;
+          font-size: 18px;
+          line-height: 32px;
+          letter-spacing: .72px;
+          border-bottom: 2px solid transparent;
+          transition: border-color .25s;
+
+          &:hover {
+            border-color: black;
+          }
+        }
+
+        .main-button {
+          margin: 0 40px;
+        }
+
+        .favorites {
+          display: block;
+          position: relative;
+          width: 32px;
+
+          img {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            transition: .25s;
+
+            &.heart-hover-state {
+              opacity: 0;
+            }
+          }
+
+          &:hover {
+            img.heart-hover-state {
+              opacity: 1;
+            }
+          }
         }
       }
     }

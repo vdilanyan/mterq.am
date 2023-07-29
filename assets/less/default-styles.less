@@ -3,6 +3,8 @@ body {
 }
 
 .main-button {
+  display: inline-block;
+  color: black;
   background: transparent;
   border: 1px solid black;
   border-radius: 24px;
@@ -10,8 +12,13 @@ body {
   font-size: 16px;
   line-height: 24px;
   text-transform: uppercase;
+  letter-spacing: 1.28px;
   cursor: pointer;
-  margin-top: 24px;
+  transition: .25s;
+
+  &:hover {
+    background: rgba(55, 126, 129, 0.40);
+  }
 }
 
 .font-normal {
@@ -28,6 +35,10 @@ body {
   span {
     color: #377E81;
   }
+}
+
+.text-center {
+  text-align: center;
 }
 
 .text-uppercase {

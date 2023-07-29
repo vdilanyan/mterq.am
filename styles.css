@@ -71,6 +71,8 @@ body {
   font-family: 'Segoe UI Semibold', sans-serif;
 }
 .main-button {
+  display: inline-block;
+  color: black;
   background: transparent;
   border: 1px solid black;
   border-radius: 24px;
@@ -78,8 +80,12 @@ body {
   font-size: 16px;
   line-height: 24px;
   text-transform: uppercase;
+  letter-spacing: 1.28px;
   cursor: pointer;
-  margin-top: 24px;
+  transition: 0.25s;
+}
+.main-button:hover {
+  background: rgba(55, 126, 129, 0.4);
 }
 .font-normal {
   font-family: 'Segoe UI', sans-serif;
@@ -92,6 +98,9 @@ body {
 }
 .font-kamavor span {
   color: #377E81;
+}
+.text-center {
+  text-align: center;
 }
 .text-uppercase {
   text-transform: uppercase;
@@ -125,15 +134,48 @@ header .header-content {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 16px 0;
 }
 header .header-content ul {
   display: flex;
+  align-items: center;
   margin: 0 82px 0 0;
-  gap: 24px;
 }
-header .header-content ul li a {
+header .header-content ul li {
+  display: block;
+}
+header .header-content ul li a:not(.main-button, .favorites) {
+  display: block;
+  padding: 24px 24px 22px;
   color: inherit;
+  font-size: 18px;
+  line-height: 32px;
+  letter-spacing: 0.72px;
+  border-bottom: 2px solid transparent;
+  transition: border-color 0.25s;
+}
+header .header-content ul li a:not(.main-button, .favorites):hover {
+  border-color: black;
+}
+header .header-content ul li .main-button {
+  margin: 0 40px;
+}
+header .header-content ul li .favorites {
+  display: block;
+  position: relative;
+  width: 32px;
+}
+header .header-content ul li .favorites img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: 0.25s;
+}
+header .header-content ul li .favorites img.heart-hover-state {
+  opacity: 0;
+}
+header .header-content ul li .favorites:hover img.heart-hover-state {
+  opacity: 1;
 }
 header .header-content .logo {
   font-size: 24px;
@@ -157,6 +199,7 @@ header .header-content .logo a {
 .hero p {
   font-size: 32px;
   line-height: 2;
+  margin-bottom: 24px;
 }
 .hero img {
   display: block;
@@ -222,4 +265,89 @@ header .header-content .logo a {
 .title p {
   font-size: 16px;
   line-height: 32px;
+}
+footer {
+  background: #2E4D4F;
+  padding: 48px 0;
+  margin-top: 64px;
+}
+footer .form-label {
+  color: white;
+  letter-spacing: 1.44px;
+  font-size: 18px;
+  line-height: 24px;
+  margin-bottom: 24px;
+}
+footer .subscribe {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  padding: 4px;
+  border-radius: 24px;
+  width: fit-content;
+  margin: 0 auto;
+}
+footer .subscribe input {
+  display: block;
+  width: 293px;
+  height: 40px;
+  margin: 0 20px;
+  border: none;
+  box-shadow: none;
+  outline: none;
+}
+footer .subscribe .main-button {
+  border: none;
+  background-color: #377E81;
+  color: white;
+  text-transform: none;
+  font-size: 16px;
+  line-height: 24px;
+  padding: 8px 24px;
+}
+footer .subscribe .main-button:hover {
+  background-color: #377E81;
+}
+footer .footer-menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  color: white;
+  margin-top: 24px;
+}
+footer .footer-menu li {
+  display: block;
+}
+footer .footer-menu li a {
+  display: block;
+  color: inherit;
+  line-height: 32px;
+  letter-spacing: 0.64px;
+  padding: 8px 24px;
+}
+footer .social-copyright-section {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: 24px;
+}
+footer .social-copyright-section .social {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+}
+footer .social-copyright-section .social li {
+  display: block;
+}
+footer .social-copyright-section .social li a {
+  display: block;
+}
+footer .social-copyright-section .social li a img {
+  display: block;
+}
+footer .social-copyright-section .copyright-text {
+  color: white;
+  text-align: right;
+  align-self: center;
 }
