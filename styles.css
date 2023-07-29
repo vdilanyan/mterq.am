@@ -1,0 +1,222 @@
+@font-face {
+	font-family: 'Segoe UI';
+	src: url('fonts/segoeui.ttf') format('truetype'),
+		 url('fonts/segoeui.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'Segoe UI Semibold';
+	src: url('fonts/segoeui-semibold.ttf') format('truetype'),
+		 url('fonts/segoeui-semibold.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'Segoe UI Bold';
+	src: url('fonts/segoeui-bold.ttf') format('truetype'),
+		 url('fonts/segoeui-bold.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'Kamavor-NA';
+	src: url('fonts/Kamavor-NA.woff') format('woff'),
+		 url('fonts/Kamavor-NA.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Maler';
+	src: url('fonts/Maler.woff') format('woff'),
+		 url('fonts/Maler.ttf') format('truetype');
+}
+
+body {
+	font-family: 'Segoe UI Semibold', sans-serif;
+	margin: 0;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+p {
+	margin: 0;
+}
+
+.main-button {
+	background: transparent;
+	border: 1px solid black;
+	border-radius: 24px;
+	padding: 12px 24px;
+	font-size: 16px;
+	line-height: 24px;
+	text-transform: uppercase;
+	cursor: pointer;
+	margin-top: 24px;
+}
+
+#header {
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+	margin-bottom: 68px;
+}
+
+header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 16px 0;
+}
+
+header ul {
+	margin: 0 82px 0 0;
+	padding: 0;
+	list-style-type: none;
+	display: flex;
+	gap: 24px;
+}
+
+header p {
+	font-size: 24px;
+	line-height: 1;
+	margin-left: 80px;
+}
+
+.container {
+	margin: 0 auto;
+}
+
+.font-normal {
+	font-family: 'Segoe UI', sans-serif;
+}
+
+.font-semibold {
+	font-family: 'Segoe UI Bold', sans-serif;
+}
+
+.font-bold {
+	font-family: 'Segoe UI Bold', sans-serif;
+}
+
+.font-kamavor {
+	font-family: 'Kamavor-NA', 'Maler', sans-serif;
+}
+
+.hero {
+	display: flex;
+	gap: 24px;
+	align-items: center;
+}
+
+.half {
+	flex-basis: 50%;
+}
+
+.hero p {
+	font-size: 32px;
+	line-height: 64px;
+}
+
+.hero img {
+	display: block;
+	border-radius: 120px 0;
+}
+
+.main-content {
+	display: flex;
+	gap: 24px;
+	margin-top: 80px;
+}
+
+.main-content aside {
+	width: 342px;
+}
+
+.main-content .filtered-content {
+	flex: 1;
+}
+
+.filters-container {
+	background: #FFFFFF;
+	box-shadow: 0 0 8px rgba(0, 0, 0, 0.08);
+	border-radius: 16px;
+	padding: 24px;
+}
+
+.filters-container .filters .category button {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 8px;
+	background: transparent;
+	border: none;
+	cursor: pointer;
+	font-size: 16px;
+	line-height: 32px;
+	font-family: 'Segoe UI Bold', sans-serif;
+	padding: 8px 0;
+	width: 100%;
+}
+
+.filters-container .filters .category button .label {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+}
+
+.title {
+	display: flex;
+	gap: 8px;
+	justify-content: space-between;
+	align-items: center;
+	border-bottom: 1px solid black;
+	padding-bottom: 8px;
+	margin-bottom: 8px;
+}
+
+.title p {
+	font-size: 16px;
+	line-height: 32px;
+	font-family: 'Segoe UI Bold', sans-serif;
+	text-transform: uppercase;
+}
+
+.main-content .filtered-content {
+	display: grid;
+	grid-template-columns: auto auto auto;
+	gap: 24px;
+}
+
+.main-content .filtered-content div {
+	border-radius: 16px;
+}
+
+.main-content .filtered-content div img {
+	display: block;
+	width: 100%;
+	height: 192px;
+	object-fit: cover;
+}
+
+@media (min-width: 2000px) {
+	header {
+		width: 1920px;
+		margin: 0 auto;
+	}
+}
+
+@media (min-width: 1500px) {
+	.container {
+		width: 1440px;
+	}
+}
+
+@media (max-width: 1499px) {
+	.container {
+		width: 1170px;
+	}
+}
+
+@media (max-width: 1200px) {
+	.container {
+		width: 100%;
+	}
+}
