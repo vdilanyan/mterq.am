@@ -324,7 +324,12 @@ footer .footer-menu li a {
   color: inherit;
   line-height: 32px;
   letter-spacing: 0.64px;
-  padding: 8px 24px;
+  padding: 8px 24px 6px;
+  border-bottom: 2px solid transparent;
+  transition: border-color 0.25s;
+}
+footer .footer-menu li a:hover {
+  border-color: white;
 }
 footer .social-copyright-section {
   display: grid;
