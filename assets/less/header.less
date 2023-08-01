@@ -14,7 +14,7 @@ header {
 
       li {
         display: block;
-        a:not(.main-button, .favorites) {
+        a:not(.main-button, .icon-with-hover) {
           display: block;
           padding: 24px 24px 22px;
           color: inherit;
@@ -31,30 +31,6 @@ header {
 
         .main-button {
           margin: 0 40px;
-        }
-
-        .favorites {
-          display: block;
-          position: relative;
-          width: 32px;
-
-          img {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            transition: .25s;
-
-            &.heart-hover-state {
-              opacity: 0;
-            }
-          }
-
-          &:hover {
-            img.heart-hover-state {
-              opacity: 1;
-            }
-          }
         }
       }
     }

@@ -41,6 +41,10 @@ body {
   text-align: center;
 }
 
+.text-right {
+  text-align: right;
+}
+
 .text-uppercase {
   text-transform: uppercase;
 }
@@ -51,6 +55,26 @@ body {
 
 .half {
   flex-basis: 50%;
+}
+
+.icon-with-hover {
+  display: grid;
+  grid-template-areas: 'icon';
+
+  img {
+    grid-area: icon;
+    transition: .25s;
+
+    &[class*='hover'] {
+      opacity: 0;
+    }
+  }
+
+  &:hover {
+    img[class*='hover']:not([class*='checked']) {
+      opacity: 1;
+    }
+  }
 }
 
 @media (min-width: 1500px) {
